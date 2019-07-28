@@ -1,0 +1,15 @@
+<!--pages/foodShow/foodShow.wxml-->
+<view class='total'>
+  <view class='global'>
+    <view class='title'>
+      {{meal.name}}的制作方法
+    </view>
+    <view wx:for="{{meal.food}}" wx:key="item" class='inline-style'>
+      <view  class='foodShow'>
+        <text class='items'>{{item}}：</text>
+        <text>{{meal.weight[index]}}</text>
+        <view class='blank'></view>
+      </view>
+    </view>
+  </view>
+</view>

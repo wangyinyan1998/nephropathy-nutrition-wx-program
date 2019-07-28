@@ -1,0 +1,138 @@
+/* pages/collectionShow/collectionShow.wxss */
+/*page1 样式*/
+.position-center{
+  margin-top: 8rem;
+  align-content: center;
+  align-self: center;
+}
+.head{
+  align-self: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  margin-right: 0rpx;
+  font-size: 40rpx;
+}
+.show{
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 650rpx;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+.ingreShow{
+  display: inline;
+}
+.ingreNameShow{
+  line-height: 50rpx;
+  font-size: 35rpx;
+}
+.container{
+  width: 100%;
+  padding: 5rpx;
+}
+.choosedFood{
+  width: 650rpx;
+  display: flex;
+  justify-content: center;
+}
+.show2{
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width: 650rpx;
+}
+.meauTitle{
+  color: #87cdc0;
+  font-size: 40rpx;
+  margin-top: 15rpx;
+  margin-bottom: 10rpx;
+}
+.blank{
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  height: 0.2rem;
+  background: #e4e4e4;
+}
+.position{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+/*page2样式*/
+
+.page-open{
+ width:100%;
+}
+.showtitle{
+  align-self: center;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  margin-right: 0rpx;
+  width: 100%;
+  font-size: 40rpx;
+}
+.bt{
+  width: 12rem;
+  justify-content: center;
+  background: #B4E0D8;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  font-size: 40rpx;
+  border: none;
+}
+.meauTitle2{
+  display: flex;
+  font-size: 40rpx;
+  color: #87cdc0;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+.ingreNameShow2{
+  display: flex;
+  font-size: 35rpx;
+  margin-left: 5rem;
+  margin-bottom: 15rpx;
+  align-items: center;
+}
+.bl{
+  display: flex;
+  justify-content: center;
+}
+.blank2{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  height: 0.1rem;
+  background: #e4e4e4;
+  width: 85%;
+}
+.small{
+  color: #bcbcbc;
+  font-size: smaller;
+  align-content: center;
+}
+.ingreNameShow{
+  display: inline;
+  padding: 15rpx;
+}
+.mealNameShow{
+  display: flex;
+  justify-content: center;
+  font-size: 40rpx;
+  color: #87cdc0;
+  margin-bottom: 15rpx;
+}
+.dialog-close{
+  font-size: 30rpx;
+  color: #bcbcbc;
+  display: flex;
+  justify-content: center;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}

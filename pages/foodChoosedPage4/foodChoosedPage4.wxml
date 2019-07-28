@@ -1,0 +1,52 @@
+<!--pages/foodChoosedPage4/foodChoosedPage4.wxml-->
+<!--page4-展示今日食谱-->
+<view class='container2'>
+  <view class='head'>
+    <text>今日食谱</text>
+  </view>
+  <view class='showMeal' wx:for="{{choosedFood}}" wx:key="item" wx:for-index="index">
+    <view class='meauTitle' wx:if="{{index==0}}">早餐</view>
+    <view class='meauTitle' wx:if="{{index==1}}">中餐</view>
+    <view class='meauTitle' wx:if="{{index==2}}">晚餐</view>
+    <view class='ingreShow' wx:for="{{item}}" wx:key="item">
+      <text decode="{{true}}">{{item.name}}&nbsp;&nbsp;</text>
+      <text class='mid'>{{item.totalWeight}} g</text>
+    </view>
+  </view>
+
+  <view class='tab'>
+    <view class="table">
+      <view class="tr">
+        <view class="th cf">成分</view>
+        <view class="th sr">摄入</view>
+        <view class="th tj">推荐</view>
+      </view>
+      <view class="tr">
+        <view class="td cf">能量（Kcal）</view>
+        <view class="td num">{{totalHeat}}</view>
+        <view class="td tj">1545-1802</view>
+      </view>
+      <view class="tr">
+        <view class="td cf">总蛋白质（g）</view>
+        <view class="td num">{{totalProteinAmount}}</view>
+        <view class="td tj">41-51</view>
+      </view>
+      <view class="tr">
+        <view class="td cf">优质蛋白（g）</view>
+        <view class="td num">{{totalqualityProtein}}</view>
+        <view class="td tj">20-35</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="head">推荐菜</view>
+    <text class='dialog-close' decode='true'>分享小程序查看做法哦~</text>
+  </view>
+  <view class='showMeal' wx:for="{{choosedMeal}}" wx:key="item">
+    <view bindtap='mealMake'  id="{{item.id}}" class='mealshow'>{{item.name}} </view>  
+  </view>
+  <view>
+    <view class='blank3'></view>
+    <button bindtap='collectMeau' class='bt2'>收藏今日食谱</button>
+  </view>
+</view>

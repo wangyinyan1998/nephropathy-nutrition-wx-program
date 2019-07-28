@@ -1,0 +1,323 @@
+/* pages/foodChoose/foodChoose.wxss */
+
+/*page1-选择食材*/
+
+.container {
+  padding-top: 5rpx;
+  justify-content: center;
+  font-size: 35rpx;
+  padding-bottom: 0rpx;
+  margin-bottom: 0rpx;
+}
+
+.resultView {
+  margin-bottom: 5rpx;
+}
+
+.resultText {
+  color: #87cdc0; /*文字绿色是135,205,192*/
+  font-size: large;
+}
+
+/*新增css*/
+
+.checkbox {
+  display: block;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  border-bottom-color: #bcbcbc;
+  border-bottom-style: solid;
+  border-bottom-width: 1rpx;
+  font-size: 35rpx;
+}
+
+.tr {
+  display: flex;
+  padding-top: 0.5rem;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+}
+
+.ta {
+  width: 45%;
+}
+
+.small {
+  color: #bcbcbc;
+  font-size: smaller;
+  align-content: center;
+}
+
+.showTags {
+  float: left;
+  margin-left: 0rpx;
+  width: 26%;
+  padding-bottom: 0rpx;
+}
+
+.tag {
+  padding: 18rpx 0rpx 30rpx 25rpx; /*上 右 下 左*/
+  background: rgb(245, 245, 245);
+}
+
+.basket-image {
+  align-content: center;
+  height: 100rpx;
+  align-items: center;
+  align-self: center;
+  padding: 22rpx 0rpx 25rpx 50rpx; /*上 右 下 左*/
+  background: rgb(245, 245, 245);
+  margin-bottom: 0rpx;
+}
+
+.image-basket {
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  height: 100rpx;
+  padding: 22rpx 0rpx 25rpx 60rpx; /*上 右 下 左*/
+  background: rgb(150, 150, 150);
+  margin-bottom: 0rpx;
+  z-index: 9999;
+}
+
+.showIngredients {
+  float: right;
+  width: 71%;
+  margin-left: 0rpx;
+}
+
+.basket {
+  width: 90rpx;
+  height: 90rpx;
+  background: white;
+  border-radius: 50rpx;
+  align-items: center;
+}
+
+.choosed {
+  padding: 18rpx 0rpx 30rpx 25rpx;
+}
+
+.bt {
+  clear: both;
+  display: flex;
+  width: 8.5rem;
+  justify-content: center;
+  background: #b4e0d8;
+  color: #fff;
+  height: 2.6rem;
+  align-items: center;
+  font-size: 35rpx;
+  border: none;
+}
+
+.absoluateIndex {
+  position: absolute;
+  top: 1070rpx;
+  left: 350rpx;
+}
+
+.show {
+  width: 100%;
+  margin-top: 10rpx;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+}
+
+.basket-page-open {
+  width: 100%;
+  background: white;
+  height: 600rpx;
+  margin-top: -750rpx;
+  white-space: normal;
+  overflow: scroll;
+  z-index: 9900;
+}
+
+/*page2-展示已选择的食物*/
+
+.container2 {
+  padding: 5rpx;
+  width: 100%;
+  font-size: 38rpx;
+}
+
+.head {
+  align-self: center;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  margin-right: 0rpx;
+  width: 100%;
+  font-size: 40rpx;
+}
+
+/*table*/
+
+.ingre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*修改*/
+.ingre-food {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ingre-name{
+  display: inline;
+  margin-left: 20rpx;
+}
+.ingre-images {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0rpx;
+  padding: 0rpx;
+  border-radius: 60rpx;
+}
+/*修改*/
+
+checkbox {
+  display: flex;
+  float: right;
+  margin-right: 0.5rem;
+  height: 1rem;
+}
+
+.icon-inline {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+}
+
+.imager {
+  float: right;
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 0.1rem;
+}
+
+.imagel {
+  float: right;
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 0.1rem;
+}
+
+.icon-inline image {
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.choosedNumber {
+  float: right;
+  width: 35rpx;
+  text-align: center;
+  margin-right: 0.1rem;
+  color: #bcbcbc;
+  font-size: 35rpx;
+}
+
+.basket-choosedNumber {
+  width: 100%;
+  color: rgb(160, 160, 160);
+  font-size: smaller;
+  padding-right: 0rpx;
+  padding-left: 10rpx;
+}
+
+/*新增购物车*/
+
+.titlebox {
+  background: #e4e4e4;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+
+.title {
+  font-size: 30rpx;
+  padding-left: 1rem;
+  clear: both;
+}
+
+.choosedItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rpx;
+  margin-bottom: 10rpx;
+  width: 100%;
+}
+
+.foodName-left {
+  display: flex;
+  align-items: center;
+  font-size: 35rpx;
+  padding-left: 1rem;
+}
+
+.food-left {
+  display: flex;
+  align-items: center;
+}
+
+.icon-inline-basket {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imager-basket {
+  float: right;
+  margin-right: 0.8rem;
+}
+
+.food-right {
+  float: right;
+  width: 35rpx;
+  text-align: center;
+  margin-right: 0.8rem;
+  color: #bcbcbc;
+  font-size: 35rpx;
+}
+
+.imagel-basket {
+  float: right;
+  margin-right: 1rem;
+}
+
+.icon-inline-images {
+  height: 40rpx;
+  width: 40rpx;
+  display: inline-block;
+}
+
+.blank {
+  height: 10rpx;
+}
+
+.position-center {
+  font-size: 35rpx;
+  justify-content: center;
+  padding-left: 1rem;
+  margin-top: 0.8rem;
+}
+
+

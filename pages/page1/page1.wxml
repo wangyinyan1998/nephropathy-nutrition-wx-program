@@ -1,0 +1,123 @@
+<!--page0-验证密钥-->
+<view wx:if="{{page1==-1}}">
+  <form bindsubmit='getKey'>
+    <view class="get_key">
+      <input value='' bindinput='getKeyInput' placeholder='邀请码' focus='true'/>
+    </view>
+    <button class="bt" form-type='submit'>请输入邀请码</button>
+  </form>
+</view>
+
+<!--page1--用来登录和获取病人信息的页面-->
+<view wx:if="{{page1==0}}">
+  <form bindsubmit='getPatientInfo'>
+    <view class="table">
+      <view class="bg-w">
+        <view class="th">制定肾病营养食谱</view>
+      </view>
+      <view class="tr">
+        <view class="td">
+          <text>性别</text>
+        </view>
+        <view class="td center">
+          <picker bindchange="bindGenderPicker" value="{{genderIndex}}" range="{{genders}}">
+            <view class="picker">
+              {{genders[genderIndex]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">年龄（岁）</view>
+        <view class="td center">
+          <input type='number' bindinput='getAge' name="age" value="{{age?age:''}}"></input>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">身高（cm）</view>
+        <view class="td center">
+          <input type='number' bindinput='getHeight' name="height" value="{{height?height:''}}"></input>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">体重（kg）</view>
+        <view class="td center">
+          <input type='number' bindinput='getWeight' name="weight" value="{{weight?weight:''}}"></input>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">血肌酐（μmol/L）</view>
+        <view class="td center">
+          <input type='number' bindinput='getSerumCreatinine' name="serumCreatinine" value="{{serumCreatinine?serumCreatinine:''}}"></input>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td">血白蛋白（g/L）</view>
+        <view class="td center">
+          <input type='number' bindinput='getBloodAlbumin' name="bloodAlbumin" value="{{bloodAlbumin?bloodAlbumin:''}}"></input>
+        </view>
+      </view>
+      <!--view class="tr">
+        <view class="td">蛋白尿情况</view>
+        <view class="td center">
+          <picker bindchange="proteinuriaChange" value="{{proteinuriaIndex}}" range="{{proteinuria}}">
+            <view class="picker">
+              {{proteinuria[proteinuriaIndex]}}
+            </view>
+          </picker>
+        </view>
+      </view-->
+      <view class="tr">
+        <view class="td">肾脏替代情况</view>
+        <view class="td center">
+          <picker bindchange="kidneyChange" value="{{kidneyIndex}}" range="{{kidney}}">
+            <view class="picker">
+              {{kidney[kidneyIndex]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <!--view class="tr">
+        <view class="td">是否糖尿病</view>
+        <view class="td center">
+          <picker bindchange="ifDiabetesChange" value="{{ifDiabetesIndex}}" range="{{ifDiabetes}}">
+            <view class="picker">
+              {{ifDiabetes[ifDiabetesIndex]}}
+            </view>
+          </picker>
+        </view>
+      </view-->
+      <view class="tr">
+          <view class="td check">如果您是黑种人，请勾选此选项</view>
+          <view class="td box"> 
+            <checkbox bindtap='raceChange' />
+          </view>
+      </view>
+      <view class="bg-w">
+        <view>
+          <button class="bt" form-type='submit' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">进行营养评估</button>
+        </view>
+      </view>
+
+    </view>
+  </form>
+</view>
+
+<!--page2-->
+<view class='container' wx:if="{{page1==1}}">
+  <view class='head'>为您估算的肾小球滤过率（GFR）是</view>
+  <view class='result'>{{GFR}}ml/min/1.73m<sup>2</sup></view>
+  <view class='head'>您的标准体重是</view>
+  <view class='result'>{{weightStandard}} 公斤</view>
+  <view class='head'>您的营养状况是</view>
+  <view class='result'>{{nutritionAccess}}</view>
+  <view class='head'>您的 CKD 分期是</view>
+  <view class='result'>{{CKD}} 期</view>
+  <view class='head'>您每日所需的热量为</view>
+  <view class='result'>{{dailyHeat}} kcal</view>
+  <view class='head'>所需的蛋白质总量为</view>
+  <view class='result'>{{dailyProteinAmount}} g</view>
+  <view class='head'>其中优质蛋白质为</view>
+  <view class='result'>{{qualityProtein}} g</view>
+  <button bindtap='foodChoose' class='bt'>进行食材选择</button>
+</view>

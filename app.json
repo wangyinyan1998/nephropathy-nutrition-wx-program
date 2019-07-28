@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/page1/page1",
+    "pages/logs/logs",
+    "pages/foodChoose/foodChoose",
+    "pages/collectionShow/collectionShow",
+    "pages/foodShow/foodShow",
+    "pages/foodChoosedPage1/foodChoosedPage1",
+    "pages/foodChoosedPage2/foodChoosedPage2",
+    "pages/foodChoosedPage3/foodChoosedPage3",
+    "pages/foodChoosedPage4/foodChoosedPage4"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "肾病饮食助手",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#87cdc0",
+    "list": [
+      {
+        "pagePath": "pages/page1/page1",
+        "text": "营养评估",
+        "iconPath": "images/icon_evaluation_normat.png",
+        "selectedIconPath": "images/icon_evaluation_selected.png"
+      },
+      {
+        "pagePath": "pages/foodChoose/foodChoose",
+        "text": "饮食处方",
+        "iconPath": "images/icon_prescription_normat.png",
+        "selectedIconPath": "images/icon_prescription_selected.png"
+      },
+      {
+        "pagePath": "pages/collectionShow/collectionShow",
+        "text": "收藏",
+        "iconPath": "images/icon_like_normat.png",
+        "selectedIconPath": "images/icon_like_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

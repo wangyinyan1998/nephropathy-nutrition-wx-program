@@ -1,0 +1,29 @@
+/* pages/foodShow/foodShow.wxss */
+.total{
+  display: flex;
+  justify-content: center;
+}
+.global{
+  width: 650rpx;
+}
+.title{
+  color:  #87cdc0;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  font-size: 45rpx;
+}
+ .foodShow{
+  display: inline;
+  font-size: 35rpx;
+ }
+ .blank{
+  height: 20rpx;
+ }
+ .inline-style{
+  display: inline-block;
+  width: 50%;
+ }

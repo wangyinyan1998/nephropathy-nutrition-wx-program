@@ -1,0 +1,17 @@
+<!--pages/foodChoosedPage3/foodChoosedPage3.wxml-->
+<!--page3--选择推荐菜-->
+<view class='container2'>
+  <view class='head'>推荐菜选择</view>
+  <checkbox-group bindchange="mealChoose">
+    <label class='meal-choose' wx:for="{{meal}}" wx:key="item">
+      <view class='meal-choose-left'>
+        <text class='mealName'>{{item.name}}\n</text>
+        <text class='mealingre'>{{item.food}}</text>
+      </view>
+      <checkbox value='{{index}}' checked='{{item.checked}}' class='meal-checkbox'/>
+    </label>
+  </checkbox-group>
+  <view>
+    <button class='bt2' bindtap='submitChoosedMeal'>确定</button>
+  </view>
+</view>

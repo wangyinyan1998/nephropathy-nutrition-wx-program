@@ -1,0 +1,99 @@
+.table {
+  border: 0px solid darkgray;
+  font-size: 35rpx;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  height: 2.8rem;
+  align-items: center;
+  margin-left: 1.8rem;
+}
+.td {
+  width: 40%;
+  justify-content: center;
+}
+.center{
+  text-align: center;
+  margin-left: 0.5rem;
+}
+.get_key{
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.bg-w{
+  background: #fff;
+}
+
+.th {
+  width: 100%;
+  font-size: 40rpx;
+  justify-content: center;
+  display: flex;
+  height: 3rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+.bt{
+  margin-top: 2rem; 
+  margin-bottom: 100rpx;
+  width: 12rem;
+  justify-content: center;
+  background: #B4E0D8;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  font-size: 40rpx;
+  border: none;
+}
+.check{
+  width: 100%;
+}
+.box{
+  margin-left: 2rem;
+}
+
+input{
+  border-bottom-color: #87cdc0;
+  border-bottom-style: solid;
+  border-bottom-width: 1rpx;
+}
+picker{
+  border-bottom-color: #87cdc0;
+  border-bottom-style: solid;
+  border-bottom-width: 1rpx;
+}
+
+/* pages/page2.wxss */
+.container{  
+ padding: 30rpx;
+ height: 100%;
+ width: 100%;
+ padding-bottom: 0rpx;
+}
+.result{
+  color: #87cdc0;
+  align-items: center;
+  justify-content: center; 
+  align-self: center;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 40rpx;
+}
+.head{
+  width: 100%;
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+  font-size: 35rpx; 
+}
+sup{
+     font-size: 10px;
+     vertical-align:text-top;
+}

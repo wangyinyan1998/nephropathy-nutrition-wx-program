@@ -1,0 +1,247 @@
+<!--pages/foodChoosedPage2/foodChoosedPage2.wxml-->
+<!--page2-展示选择的食材-->
+<view class='container2'>
+  <view class='head'>
+    <text>已选择食材</text>
+    <cover-view class='blank2'></cover-view>
+  </view>
+  <view>
+    <view class='choosedfood' wx:if="{{choosedCereal.length>0}}">
+      <view class='titlebox'>
+        <view class='title'>
+          谷类
+        </view>
+      </view>
+      <view wx:for='{{choosedCereal}}' wx:for-item="item" class='wrap' wx:for-index="index">
+        <view class="choosedItems2">
+          <view wx:for="{{item.copyArray}}" wx:for-item="item2" wx:for-index="index2">
+            <view class='food-choose-left'>
+              <text decode="{{true}}">{{item.name}}&nbsp;&nbsp;</text>
+              <text class='mid'>  {{item.weight}} g</text>
+            </view>
+            <radio-group class="radio-group" bindchange="cerealRadioChange">
+              <label class='radio-label'>
+                <radio value='{{index2}} 早 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">早&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 中 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">中&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 晚 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">晚&nbsp;</text>
+              </label>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+      <view class='blank2'></view>
+    </view>
+    <view class='choosedfood' wx:if="{{choosedVeg.length>0}}">
+      <view class='titlebox'>
+        <view class='title'>
+          蔬菜
+        </view>
+      </view>
+      <view wx:for='{{choosedVeg}}' wx:key="item" class='wrap'>
+        <view class="choosedItems2">
+          <view wx:for="{{item.copyArray}}" wx:for-item="item2" wx:for-index="index2">
+            <view class='food-choose-left'>
+              <text decode="{{true}}">{{item.name}}&nbsp;&nbsp;</text>
+              <text class='mid'>  {{item.weight}} g</text>
+            </view>
+            <radio-group class="radio-group" bindchange="vegRadioChange">
+              <label class='radio-label'>
+                <radio value='{{index2}} 早 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">早&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 中 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">中&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 晚 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">晚&nbsp;</text>
+              </label>
+            </radio-group>
+
+          </view>
+
+        </view>
+      </view>
+      <view class='blank2'></view>
+    </view>
+    <view class='choosedfood' wx:if="{{choosedFruit.length>0}}">
+      <view class='titlebox'>
+        <view class='title'>
+          水果
+        </view>
+      </view>
+      <view wx:for='{{choosedFruit}}' wx:key="item" class='wrap'>
+        <view class="choosedItems2">
+          <view wx:for="{{item.copyArray}}" wx:for-item="item2" wx:for-index="index2">
+            <view class='food-choose-left'>
+              <text decode="{{true}}">{{item.name}}&nbsp;&nbsp;</text>
+              <text class='mid'>  {{item.weight}} g</text>
+            </view>
+            <radio-group class="radio-group" bindchange="fruitRadioChange">
+              <label class='radio-label'>
+                <radio value='{{index2}} 早 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">早&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 中 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">中&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 晚 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">晚&nbsp;</text>
+              </label>
+            </radio-group>
+          </view>
+
+        </view>
+      </view>
+      <view class='blank2'></view>
+    </view>
+    <view class='choosedfood' wx:if="{{choosedMilk.length>0}}">
+      <view class='titlebox'>
+        <view class='title'>
+          奶类
+        </view>
+      </view>
+      <view wx:for='{{choosedMilk}}' wx:key="item" class='wrap'>
+        <view class="choosedItems2">
+          <view wx:for="{{item.copyArray}}" wx:for-item="item2" wx:for-index="index2">
+            <view class='food-choose-left'>
+              <text decode="{{true}}">{{item.name}}&nbsp;&nbsp;</text>
+              <text class='mid'>  {{item.weight}} g</text>
+            </view>
+            <radio-group class="radio-group" bindchange="milkRadioChange">
+              <label class='radio-label'>
+                <radio value='{{index2}} 早 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">早&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 中 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">中&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 晚 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">晚&nbsp;</text>
+              </label>
+            </radio-group>
+
+          </view>
+
+        </view>
+      </view>
+      <view class='blank2'></view>
+    </view>
+    <view class='choosedfood' wx:if="{{choosedMeatEgg.length>0}}">
+      <view class='titlebox'>
+        <view class='title'>
+          肉蛋类
+        </view>
+      </view>
+      <view wx:for='{{choosedMeatEgg}}' wx:key="item" class='wrap'>
+        <view class="choosedItems2">
+          <view wx:for="{{item.copyArray}}" wx:for-item="item2" wx:for-index="index2">
+            <view class='food-choose-left'>
+              <text decode="{{true}}">{{item.name}}&nbsp;&nbsp;</text>
+              <text class='mid'>  {{item.weight}} g</text>
+            </view>
+            <radio-group class="radio-group" bindchange="meatEggRadioChange">
+              <label class='radio-label'>
+                <radio value='{{index2}} 早 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">早&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 中 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">中&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 晚 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">晚&nbsp;</text>
+              </label>
+            </radio-group>
+
+          </view>
+
+        </view>
+      </view>
+      <view class='blank2'></view>
+    </view>
+    <view class='choosedfood' wx:if="{{choosedGrease.length>0}}">
+      <view class='titlebox'>
+        <view class='title'>
+          油脂类
+        </view>
+      </view>
+      <view wx:for='{{choosedGrease}}' wx:key="item" class='wrap'>
+        <view class="choosedItems2">
+          <view wx:for="{{item.copyArray}}" wx:for-item="item2" wx:for-index="index2">
+            <view class='food-choose-left'>
+              <text decode="{{true}}">{{item.name}}&nbsp;&nbsp;</text>
+              <text class='mid'>  {{item.weight}} g</text>
+            </view>
+            <radio-group class="radio-group" bindchange="greaseRadioChange">
+              <label class='radio-label'>
+                <radio value='{{index2}} 早 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">早&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 中 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">中&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 晚 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">晚&nbsp;</text>
+              </label>
+            </radio-group>
+
+          </view>
+
+        </view>
+      </view>
+      <view class='blank2'></view>
+    </view>
+    <view class='choosedfood' wx:if="{{choosedNuts.length>0}}">
+      <view class='titlebox'>
+        <view class='title'>
+          坚果类
+        </view>
+      </view>
+      <view wx:for='{{choosedNuts}}' wx:key="item" class='wrap'>
+        <view class="choosedItems2">
+          <view wx:for="{{item.copyArray}}" wx:for-item="item2" wx:for-index="index2">
+            <view class='food-choose-left'>
+              <text decode="{{true}}">{{item.name}}&nbsp;</text>
+              <text class='mid'>  {{item.weight}} g</text>
+            </view>
+            <radio-group class="radio-group" bindchange="nutsRadioChange">
+              <label class='radio-label'>
+                <radio value='{{index2}} 早 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">早&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 中 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">中&nbsp;</text>
+              </label>
+              <label class='radio-label'>
+                <radio value='{{index2}} 晚 {{index}}' class='radio'></radio>
+                <text class='mid' decode="{{true}}">晚&nbsp;</text>
+              </label>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+      <view class='blank2'></view>
+    </view>
+  </view>
+
+  <view>
+    <button bindtap='submitRecipe' class='bt2'>生成今日食谱</button>
+  </view>
+</view>

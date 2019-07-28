@@ -1,0 +1,906 @@
+/**
+Created by Machine
+**/
+//------------------onLoad----------------------------
+    var choosedCereal_projection = [];
+    var k = 0;
+    for (var i = 0; i < this.data.choosedCereal.length; i++) {
+      for (var j = 0; j < this.data.choosedCereal[i].copyArray.length; j++) {
+        var xx = 0;
+        var yy = kk;
+        if (kk >= 10) {
+          xx = 1;
+          yy = kk - 10;
+        }
+        choosedCereal_projection.push({
+          name: this.data.choosedCereal[i].name,
+          weight: this.data.choosedCereal[i].weight,
+          projection: i,
+          projection_copy: j,
+          projection_index: k,
+          projection_bind: "onMovedCereal_" + k,
+          x: xx * 126,
+          y: yy * 40
+        });
+        k++;
+      }
+      kk++;
+    }
+    this.setData({
+      choosedCereal_projection: choosedCereal_projection
+    });
+
+
+    var choosedVeg_projection = [];
+    var k = 0;
+    for (var i = 0; i < this.data.choosedVeg.length; i++) {
+      for (var j = 0; j < this.data.choosedVeg[i].copyArray.length; j++) {
+        var xx = 0;
+        var yy = kk;
+        if (kk >= 10) {
+          xx = 1;
+          yy = kk - 10;
+        }
+        choosedVeg_projection.push({
+          name: this.data.choosedVeg[i].name,
+          weight: this.data.choosedVeg[i].weight,
+          projection: i,
+          projection_copy: j,
+          projection_index: k,
+          projection_bind: "onMovedVeg_" + k,
+          x: xx * 126,
+          y: yy * 40
+        });
+        k++;
+      }
+      kk++;
+    }
+    this.setData({
+      choosedVeg_projection: choosedVeg_projection
+    });
+
+
+    var choosedFruit_projection = [];
+    var k = 0;
+    for (var i = 0; i < this.data.choosedFruit.length; i++) {
+      for (var j = 0; j < this.data.choosedFruit[i].copyArray.length; j++) {
+        var xx = 0;
+        var yy = kk;
+        if (kk >= 10) {
+          xx = 1;
+          yy = kk - 10;
+        }
+        choosedFruit_projection.push({
+          name: this.data.choosedFruit[i].name,
+          weight: this.data.choosedFruit[i].weight,
+          projection: i,
+          projection_copy: j,
+          projection_index: k,
+          projection_bind: "onMovedFruit_" + k,
+          x: xx * 126,
+          y: yy * 40
+        });
+        k++;
+      }
+      kk++;
+    }
+    this.setData({
+      choosedFruit_projection: choosedFruit_projection
+    });
+
+
+    var choosedMilk_projection = [];
+    var k = 0;
+    for (var i = 0; i < this.data.choosedMilk.length; i++) {
+      for (var j = 0; j < this.data.choosedMilk[i].copyArray.length; j++) {
+        var xx = 0;
+        var yy = kk;
+        if (kk >= 10) {
+          xx = 1;
+          yy = kk - 10;
+        }
+        choosedMilk_projection.push({
+          name: this.data.choosedMilk[i].name,
+          weight: this.data.choosedMilk[i].weight,
+          projection: i,
+          projection_copy: j,
+          projection_index: k,
+          projection_bind: "onMovedMilk_" + k,
+          x: xx * 126,
+          y: yy * 40
+        });
+        k++;
+      }
+      kk++;
+    }
+    this.setData({
+      choosedMilk_projection: choosedMilk_projection
+    });
+
+
+    var choosedMeatEgg_projection = [];
+    var k = 0;
+    for (var i = 0; i < this.data.choosedMeatEgg.length; i++) {
+      for (var j = 0; j < this.data.choosedMeatEgg[i].copyArray.length; j++) {
+        var xx = 0;
+        var yy = kk;
+        if (kk >= 10) {
+          xx = 1;
+          yy = kk - 10;
+        }
+        choosedMeatEgg_projection.push({
+          name: this.data.choosedMeatEgg[i].name,
+          weight: this.data.choosedMeatEgg[i].weight,
+          projection: i,
+          projection_copy: j,
+          projection_index: k,
+          projection_bind: "onMovedMeatEgg_" + k,
+          x: xx * 126,
+          y: yy * 40
+        });
+        k++;
+      }
+      kk++;
+    }
+    this.setData({
+      choosedMeatEgg_projection: choosedMeatEgg_projection
+    });
+
+
+    var choosedGrease_projection = [];
+    var k = 0;
+    for (var i = 0; i < this.data.choosedGrease.length; i++) {
+      for (var j = 0; j < this.data.choosedGrease[i].copyArray.length; j++) {
+        var xx = 0;
+        var yy = kk;
+        if (kk >= 10) {
+          xx = 1;
+          yy = kk - 10;
+        }
+        choosedGrease_projection.push({
+          name: this.data.choosedGrease[i].name,
+          weight: this.data.choosedGrease[i].weight,
+          projection: i,
+          projection_copy: j,
+          projection_index: k,
+          projection_bind: "onMovedGrease_" + k,
+          x: xx * 126,
+          y: yy * 40
+        });
+        k++;
+      }
+      kk++;
+    }
+    this.setData({
+      choosedGrease_projection: choosedGrease_projection
+    });
+
+
+    var choosedNuts_projection = [];
+    var k = 0;
+    for (var i = 0; i < this.data.choosedNuts.length; i++) {
+      for (var j = 0; j < this.data.choosedNuts[i].copyArray.length; j++) {
+        var xx = 0;
+        var yy = kk;
+        if (kk >= 10) {
+          xx = 1;
+          yy = kk - 10;
+        }
+        choosedNuts_projection.push({
+          name: this.data.choosedNuts[i].name,
+          weight: this.data.choosedNuts[i].weight,
+          projection: i,
+          projection_copy: j,
+          projection_index: k,
+          projection_bind: "onMovedNuts_" + k,
+          x: xx * 126,
+          y: yy * 40
+        });
+        k++;
+      }
+      kk++;
+    }
+    this.setData({
+      choosedNuts_projection: choosedNuts_projection
+    });
+
+//------------------eventBind----------------------------
+  onMovedCereal_0: function (e) {
+    var index = 0;
+    var choosedData_projection = this.data.choosedCereal_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedCereal_projection: choosedData_projection
+    });
+  },
+
+  onMovedCereal_1: function (e) {
+    var index = 1;
+    var choosedData_projection = this.data.choosedCereal_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedCereal_projection: choosedData_projection
+    });
+  },
+
+  onMovedCereal_2: function (e) {
+    var index = 2;
+    var choosedData_projection = this.data.choosedCereal_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedCereal_projection: choosedData_projection
+    });
+  },
+
+  onMovedCereal_3: function (e) {
+    var index = 3;
+    var choosedData_projection = this.data.choosedCereal_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedCereal_projection: choosedData_projection
+    });
+  },
+
+  onMovedCereal_4: function (e) {
+    var index = 4;
+    var choosedData_projection = this.data.choosedCereal_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedCereal_projection: choosedData_projection
+    });
+  },
+
+  onMovedCereal_5: function (e) {
+    var index = 5;
+    var choosedData_projection = this.data.choosedCereal_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedCereal_projection: choosedData_projection
+    });
+  },
+
+  onMovedCereal_6: function (e) {
+    var index = 6;
+    var choosedData_projection = this.data.choosedCereal_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedCereal_projection: choosedData_projection
+    });
+  },
+
+  onMovedCereal_7: function (e) {
+    var index = 7;
+    var choosedData_projection = this.data.choosedCereal_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedCereal_projection: choosedData_projection
+    });
+  },
+
+  onMovedCereal_8: function (e) {
+    var index = 8;
+    var choosedData_projection = this.data.choosedCereal_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedCereal_projection: choosedData_projection
+    });
+  },
+
+  onMovedCereal_9: function (e) {
+    var index = 9;
+    var choosedData_projection = this.data.choosedCereal_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedCereal_projection: choosedData_projection
+    });
+  },
+
+  onMovedVeg_0: function (e) {
+    var index = 0;
+    var choosedData_projection = this.data.choosedVeg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedVeg_projection: choosedData_projection
+    });
+  },
+
+  onMovedVeg_1: function (e) {
+    var index = 1;
+    var choosedData_projection = this.data.choosedVeg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedVeg_projection: choosedData_projection
+    });
+  },
+
+  onMovedVeg_2: function (e) {
+    var index = 2;
+    var choosedData_projection = this.data.choosedVeg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedVeg_projection: choosedData_projection
+    });
+  },
+
+  onMovedVeg_3: function (e) {
+    var index = 3;
+    var choosedData_projection = this.data.choosedVeg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedVeg_projection: choosedData_projection
+    });
+  },
+
+  onMovedVeg_4: function (e) {
+    var index = 4;
+    var choosedData_projection = this.data.choosedVeg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedVeg_projection: choosedData_projection
+    });
+  },
+
+  onMovedVeg_5: function (e) {
+    var index = 5;
+    var choosedData_projection = this.data.choosedVeg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedVeg_projection: choosedData_projection
+    });
+  },
+
+  onMovedVeg_6: function (e) {
+    var index = 6;
+    var choosedData_projection = this.data.choosedVeg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedVeg_projection: choosedData_projection
+    });
+  },
+
+  onMovedVeg_7: function (e) {
+    var index = 7;
+    var choosedData_projection = this.data.choosedVeg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedVeg_projection: choosedData_projection
+    });
+  },
+
+  onMovedVeg_8: function (e) {
+    var index = 8;
+    var choosedData_projection = this.data.choosedVeg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedVeg_projection: choosedData_projection
+    });
+  },
+
+  onMovedVeg_9: function (e) {
+    var index = 9;
+    var choosedData_projection = this.data.choosedVeg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedVeg_projection: choosedData_projection
+    });
+  },
+
+  onMovedFruit_0: function (e) {
+    var index = 0;
+    var choosedData_projection = this.data.choosedFruit_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedFruit_projection: choosedData_projection
+    });
+  },
+
+  onMovedFruit_1: function (e) {
+    var index = 1;
+    var choosedData_projection = this.data.choosedFruit_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedFruit_projection: choosedData_projection
+    });
+  },
+
+  onMovedFruit_2: function (e) {
+    var index = 2;
+    var choosedData_projection = this.data.choosedFruit_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedFruit_projection: choosedData_projection
+    });
+  },
+
+  onMovedFruit_3: function (e) {
+    var index = 3;
+    var choosedData_projection = this.data.choosedFruit_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedFruit_projection: choosedData_projection
+    });
+  },
+
+  onMovedFruit_4: function (e) {
+    var index = 4;
+    var choosedData_projection = this.data.choosedFruit_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedFruit_projection: choosedData_projection
+    });
+  },
+
+  onMovedFruit_5: function (e) {
+    var index = 5;
+    var choosedData_projection = this.data.choosedFruit_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedFruit_projection: choosedData_projection
+    });
+  },
+
+  onMovedFruit_6: function (e) {
+    var index = 6;
+    var choosedData_projection = this.data.choosedFruit_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedFruit_projection: choosedData_projection
+    });
+  },
+
+  onMovedFruit_7: function (e) {
+    var index = 7;
+    var choosedData_projection = this.data.choosedFruit_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedFruit_projection: choosedData_projection
+    });
+  },
+
+  onMovedFruit_8: function (e) {
+    var index = 8;
+    var choosedData_projection = this.data.choosedFruit_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedFruit_projection: choosedData_projection
+    });
+  },
+
+  onMovedFruit_9: function (e) {
+    var index = 9;
+    var choosedData_projection = this.data.choosedFruit_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedFruit_projection: choosedData_projection
+    });
+  },
+
+  onMovedMilk_0: function (e) {
+    var index = 0;
+    var choosedData_projection = this.data.choosedMilk_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMilk_projection: choosedData_projection
+    });
+  },
+
+  onMovedMilk_1: function (e) {
+    var index = 1;
+    var choosedData_projection = this.data.choosedMilk_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMilk_projection: choosedData_projection
+    });
+  },
+
+  onMovedMilk_2: function (e) {
+    var index = 2;
+    var choosedData_projection = this.data.choosedMilk_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMilk_projection: choosedData_projection
+    });
+  },
+
+  onMovedMilk_3: function (e) {
+    var index = 3;
+    var choosedData_projection = this.data.choosedMilk_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMilk_projection: choosedData_projection
+    });
+  },
+
+  onMovedMilk_4: function (e) {
+    var index = 4;
+    var choosedData_projection = this.data.choosedMilk_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMilk_projection: choosedData_projection
+    });
+  },
+
+  onMovedMilk_5: function (e) {
+    var index = 5;
+    var choosedData_projection = this.data.choosedMilk_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMilk_projection: choosedData_projection
+    });
+  },
+
+  onMovedMilk_6: function (e) {
+    var index = 6;
+    var choosedData_projection = this.data.choosedMilk_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMilk_projection: choosedData_projection
+    });
+  },
+
+  onMovedMilk_7: function (e) {
+    var index = 7;
+    var choosedData_projection = this.data.choosedMilk_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMilk_projection: choosedData_projection
+    });
+  },
+
+  onMovedMilk_8: function (e) {
+    var index = 8;
+    var choosedData_projection = this.data.choosedMilk_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMilk_projection: choosedData_projection
+    });
+  },
+
+  onMovedMilk_9: function (e) {
+    var index = 9;
+    var choosedData_projection = this.data.choosedMilk_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMilk_projection: choosedData_projection
+    });
+  },
+
+  onMovedMeatEgg_0: function (e) {
+    var index = 0;
+    var choosedData_projection = this.data.choosedMeatEgg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMeatEgg_projection: choosedData_projection
+    });
+  },
+
+  onMovedMeatEgg_1: function (e) {
+    var index = 1;
+    var choosedData_projection = this.data.choosedMeatEgg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMeatEgg_projection: choosedData_projection
+    });
+  },
+
+  onMovedMeatEgg_2: function (e) {
+    var index = 2;
+    var choosedData_projection = this.data.choosedMeatEgg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMeatEgg_projection: choosedData_projection
+    });
+  },
+
+  onMovedMeatEgg_3: function (e) {
+    var index = 3;
+    var choosedData_projection = this.data.choosedMeatEgg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMeatEgg_projection: choosedData_projection
+    });
+  },
+
+  onMovedMeatEgg_4: function (e) {
+    var index = 4;
+    var choosedData_projection = this.data.choosedMeatEgg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMeatEgg_projection: choosedData_projection
+    });
+  },
+
+  onMovedMeatEgg_5: function (e) {
+    var index = 5;
+    var choosedData_projection = this.data.choosedMeatEgg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMeatEgg_projection: choosedData_projection
+    });
+  },
+
+  onMovedMeatEgg_6: function (e) {
+    var index = 6;
+    var choosedData_projection = this.data.choosedMeatEgg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMeatEgg_projection: choosedData_projection
+    });
+  },
+
+  onMovedMeatEgg_7: function (e) {
+    var index = 7;
+    var choosedData_projection = this.data.choosedMeatEgg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMeatEgg_projection: choosedData_projection
+    });
+  },
+
+  onMovedMeatEgg_8: function (e) {
+    var index = 8;
+    var choosedData_projection = this.data.choosedMeatEgg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMeatEgg_projection: choosedData_projection
+    });
+  },
+
+  onMovedMeatEgg_9: function (e) {
+    var index = 9;
+    var choosedData_projection = this.data.choosedMeatEgg_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedMeatEgg_projection: choosedData_projection
+    });
+  },
+
+  onMovedGrease_0: function (e) {
+    var index = 0;
+    var choosedData_projection = this.data.choosedGrease_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedGrease_projection: choosedData_projection
+    });
+  },
+
+  onMovedGrease_1: function (e) {
+    var index = 1;
+    var choosedData_projection = this.data.choosedGrease_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedGrease_projection: choosedData_projection
+    });
+  },
+
+  onMovedGrease_2: function (e) {
+    var index = 2;
+    var choosedData_projection = this.data.choosedGrease_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedGrease_projection: choosedData_projection
+    });
+  },
+
+  onMovedGrease_3: function (e) {
+    var index = 3;
+    var choosedData_projection = this.data.choosedGrease_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedGrease_projection: choosedData_projection
+    });
+  },
+
+  onMovedGrease_4: function (e) {
+    var index = 4;
+    var choosedData_projection = this.data.choosedGrease_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedGrease_projection: choosedData_projection
+    });
+  },
+
+  onMovedGrease_5: function (e) {
+    var index = 5;
+    var choosedData_projection = this.data.choosedGrease_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedGrease_projection: choosedData_projection
+    });
+  },
+
+  onMovedGrease_6: function (e) {
+    var index = 6;
+    var choosedData_projection = this.data.choosedGrease_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedGrease_projection: choosedData_projection
+    });
+  },
+
+  onMovedGrease_7: function (e) {
+    var index = 7;
+    var choosedData_projection = this.data.choosedGrease_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedGrease_projection: choosedData_projection
+    });
+  },
+
+  onMovedGrease_8: function (e) {
+    var index = 8;
+    var choosedData_projection = this.data.choosedGrease_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedGrease_projection: choosedData_projection
+    });
+  },
+
+  onMovedGrease_9: function (e) {
+    var index = 9;
+    var choosedData_projection = this.data.choosedGrease_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedGrease_projection: choosedData_projection
+    });
+  },
+
+  onMovedNuts_0: function (e) {
+    var index = 0;
+    var choosedData_projection = this.data.choosedNuts_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedNuts_projection: choosedData_projection
+    });
+  },
+
+  onMovedNuts_1: function (e) {
+    var index = 1;
+    var choosedData_projection = this.data.choosedNuts_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedNuts_projection: choosedData_projection
+    });
+  },
+
+  onMovedNuts_2: function (e) {
+    var index = 2;
+    var choosedData_projection = this.data.choosedNuts_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedNuts_projection: choosedData_projection
+    });
+  },
+
+  onMovedNuts_3: function (e) {
+    var index = 3;
+    var choosedData_projection = this.data.choosedNuts_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedNuts_projection: choosedData_projection
+    });
+  },
+
+  onMovedNuts_4: function (e) {
+    var index = 4;
+    var choosedData_projection = this.data.choosedNuts_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedNuts_projection: choosedData_projection
+    });
+  },
+
+  onMovedNuts_5: function (e) {
+    var index = 5;
+    var choosedData_projection = this.data.choosedNuts_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedNuts_projection: choosedData_projection
+    });
+  },
+
+  onMovedNuts_6: function (e) {
+    var index = 6;
+    var choosedData_projection = this.data.choosedNuts_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedNuts_projection: choosedData_projection
+    });
+  },
+
+  onMovedNuts_7: function (e) {
+    var index = 7;
+    var choosedData_projection = this.data.choosedNuts_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedNuts_projection: choosedData_projection
+    });
+  },
+
+  onMovedNuts_8: function (e) {
+    var index = 8;
+    var choosedData_projection = this.data.choosedNuts_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedNuts_projection: choosedData_projection
+    });
+  },
+
+  onMovedNuts_9: function (e) {
+    var index = 9;
+    var choosedData_projection = this.data.choosedNuts_projection;
+    choosedData_projection[index].x = e.detail.x;
+    choosedData_projection[index].y = e.detail.y;
+    this.setData({
+      choosedNuts_projection: choosedData_projection
+    });
+  },

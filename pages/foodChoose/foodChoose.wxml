@@ -1,0 +1,36 @@
+<!--pages/foodChoose/foodChoose.wxml-->
+<view class='container'>
+  <view class='bt-view'>
+    <button class='bt' bindtap='makeRecipe'>定制新食谱</button>
+  </view>
+  <view class='big-font' wx:if="{{meaus.length>0}}">
+    <text>当前食谱为：</text>
+  </view>
+  <view class='big-font' wx:if="{{meaus.length<=0}}">
+  <text>当前还没有定制食谱呦~</text>
+  </view>
+  <view class='showMeal' wx:for="{{meaus[meaus.length-1]}}" wx:for-item="meau" wx:for-index="index2"  wx:if="{{meaus.length>0}}">
+    <view wx:if="{{index2==0}}" class='showtitle'>食材</view>
+    <view class='ingreShow2' wx:if="{{index2==0}}" wx:for="{{meau}}" wx:for-item="choosedIngre" wx:for-index="index3">
+      <view class='meauTitle2' wx:if="{{index3==0}}">早餐</view>
+      <view class='meauTitle2' wx:if="{{index3==1}}">中餐</view>
+      <view class='meauTitle2' wx:if="{{index3==2}}">晚餐</view>
+      <view class='ingreNameShow2' wx:for="{{choosedIngre}}" wx:for-item="ingre">
+        <text decode="{{true}}">{{ingre.name}}&nbsp;&nbsp;</text>
+        <text class='small'>{{ingre.totalWeight}}g</text>
+      </view>
+    </view>
+    <view wx:if="{{index2==1}}">
+      <view class='bl'>
+        <view class='blank2'></view>
+      </view>
+      <view class='showtitle'>推荐菜</view>
+      <text class='dialog-close' decode='true'>分享小程序查看做法哦~</text>
+    </view>
+    <view class='mealShow' wx:if="{{index2==1}}" wx:for="{{meau}}" wx:for-item="choosedMeal">
+      <view class='mealNameShow' id="{{choosedMeal.id}}" bindtap='mealMake'>
+        <text>{{choosedMeal.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

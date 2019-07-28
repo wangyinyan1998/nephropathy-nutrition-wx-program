@@ -1,0 +1,49 @@
+/* pages/foodChoosedPage3/foodChoosedPage3.wxss */
+.container2{
+  padding: 5rpx;
+  width: 100%;
+  font-size: 38rpx;
+}
+.head{
+  align-self: center;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  margin-right: 0rpx;
+  width: 100%;
+  font-size: 40rpx;
+}
+.meal-choose-left{
+  display: inline-block;
+  width: 80%;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  padding-left: 1rem;
+}
+.mealName{
+  font-size: 40rpx;
+  color: #87cdc0;
+  margin-bottom: 15rpx;
+}
+.mealingre{
+  font-size: smaller;
+}
+.meal-checkbox{
+  float: right;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+.bt2{
+  margin-top: 2rem; 
+  margin-bottom: 100rpx;
+  width: 12rem;
+  justify-content: center;
+  background: #B4E0D8;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  font-size: 40rpx;
+  border: none;
+}

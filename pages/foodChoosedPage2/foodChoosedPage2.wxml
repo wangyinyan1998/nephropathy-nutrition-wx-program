@@ -1,0 +1,125 @@
+<!--pages/movable/movable.wxml-->
+<view class="section">
+  <view class="section__title">请将食材分配至三餐</view>
+  <movable-area class="movable_area">
+    <cover-view></cover-view>
+    <cover-view class="div_part">早餐</cover-view>
+    <cover-view class="div_part">午餐</cover-view>
+    <cover-view class="div_part">晚餐</cover-view>
+    <movable-view
+      class="movable_item"
+      x="{{item.x}}"
+      y="{{item.y}}"
+      bindchange="{{item.projection_bind}}"
+      direction="all"
+      wx:for='{{choosedCereal_projection}}' 
+      wx:for-item="item" 
+      wx:for-index="index"
+    >
+    <view>
+    <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+    <view>
+    {{item.name}}
+    </view></view>
+    </movable-view>
+    <movable-view
+      class="movable_item"
+      x="{{item.x}}"
+      y="{{item.y}}"
+      bindchange="{{item.projection_bind}}"
+      direction="all"
+      wx:for='{{choosedVeg_projection}}' 
+      wx:for-item="item" 
+      wx:for-index="index"
+    >
+    <view>
+    <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+    <view>
+    {{item.name}}
+    </view></view>
+    </movable-view>
+    <movable-view
+      class="movable_item"
+      x="{{item.x}}"
+      y="{{item.y}}"
+      bindchange="{{item.projection_bind}}"
+      direction="all"
+      wx:for='{{choosedFruit_projection}}' 
+      wx:for-item="item" 
+      wx:for-index="index"
+    >
+    <view>
+    <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+    <view>
+    {{item.name}}
+    </view></view>
+    </movable-view>
+    <movable-view
+      class="movable_item"
+      x="{{item.x}}"
+      y="{{item.y}}"
+      bindchange="{{item.projection_bind}}"
+      direction="all"
+      wx:for='{{choosedMilk_projection}}' 
+      wx:for-item="item" 
+      wx:for-index="index"
+    >
+    <view>
+    <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+    <view>
+    {{item.name}}
+    </view></view>
+    </movable-view>
+    <movable-view
+      class="movable_item"
+      x="{{item.x}}"
+      y="{{item.y}}"
+      bindchange="{{item.projection_bind}}"
+      direction="all"
+      wx:for='{{choosedMeatEgg_projection}}' 
+      wx:for-item="item" 
+      wx:for-index="index"
+    >
+    <view>
+    <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+    <view>
+    {{item.name}}
+    </view></view>
+    </movable-view>
+    <movable-view
+      class="movable_item"
+      x="{{item.x}}"
+      y="{{item.y}}"
+      bindchange="{{item.projection_bind}}"
+      direction="all"
+      wx:for='{{choosedGrease_projection}}' 
+      wx:for-item="item" 
+      wx:for-index="index"
+    >
+    <view>
+    <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+    <view>
+    {{item.name}}
+    </view></view>
+    </movable-view>
+    <movable-view
+      class="movable_item"
+      x="{{item.x}}"
+      y="{{item.y}}"
+      bindchange="{{item.projection_bind}}"
+      direction="all"
+      wx:for='{{choosedNuts_projection}}' 
+      wx:for-item="item" 
+      wx:for-index="index"
+    >
+    <view>
+    <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+    <view>
+    {{item.name}}
+    </view></view>
+    </movable-view>
+  </movable-area>
+  <view>
+    <button bindtap='submitRecipe' class='bt2'>生成今日食谱</button>
+  </view>
+</view>

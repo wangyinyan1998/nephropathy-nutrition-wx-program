@@ -1,0 +1,451 @@
+  <view class='container'>
+    <view class="show">
+      <view class='showTags' wx:if="{{!showBasket}}">
+        <view class="{{showIngredients==1?'choosed':'tag'}}" bindtap='cerealShow'>
+          <text>谷类\n<text class="small">应选 {{numberOfCereal}} 份</text></text>
+        </view>
+        <view class="{{showIngredients==2?'choosed':'tag'}}" bindtap='VegShow'>
+          <text>蔬菜\n<text class='small'>应选 {{numberOfVegetable}} 份</text></text>
+        </view>
+
+        <view class="{{showIngredients==3?'choosed':'tag'}}" bindtap='fruitShow'>
+          <text>水果\n<text class='small'>应选 {{numberOfFruit}} 份</text></text>
+        </view>
+        <view class="{{showIngredients==4?'choosed':'tag'}}" bindtap='milkShow'>
+          <text>奶类\n<text class='small'>应选 {{numberOfMilk}} 份</text></text>
+        </view>
+
+        <view class="{{showIngredients==5?'choosed':'tag'}}" bindtap='meatEggShow'>
+          <text>肉蛋类\n<text class='small'>应选 {{numberOfMeatEgg}} 份</text></text>
+        </view>
+
+        <view class="{{showIngredients==6?'choosed':'tag'}}" bindtap='greaseShow'>
+          <text>油脂类\n<text class='small'>应选 {{numberOfGrease}} 份</text></text>
+        </view>
+        <view class="{{showIngredients==7?'choosed':'tag'}}" bindtap='nutsShow'>
+          <text>坚果类\n<text class='small'>应选 {{numberOfNuts}} 份</text></text>
+        </view>
+        <view class='basket-image' bindtap='showBasket'>
+          <image class='basket' src="/images/icon_basket_normat.png"></image>
+        </view>
+      </view>
+      <view class='showTags' wx:if="{{showBasket}}">
+        <view class="{{showIngredients==1?'choosed':'tag'}}" bindtap='cerealShow'>
+          <text>谷类\n<text class='small'>应选 {{numberOfCereal}} 份</text></text>
+        </view>
+        <view class="{{showIngredients==2?'choosed':'tag'}}" bindtap='VegShow'>
+          <text>蔬菜\n<text  class='small'>应选 {{numberOfVegetable}} 份</text></text>
+        </view>
+        <view class="{{showIngredients==3?'choosed':'tag'}}" bindtap='fruitShow'>
+          <text>水果\n<text  class='small'>应选 {{numberOfFruit}} 份</text></text>
+        </view>
+        <view class="{{showIngredients==4?'choosed':'tag'}}" bindtap='milkShow'>
+          <text>奶类\n<text  class='small'>应选 {{numberOfMilk}} 份</text></text>
+        </view>
+        <view class="{{showIngredients==5?'choosed':'tag'}}" bindtap='meatEggShow'>
+          <text>肉蛋类\n<text  class='small'>应选 {{numberOfMeatEgg}} 份</text></text>
+        </view>
+        <view class="{{showIngredients==6?'choosed':'tag'}}" bindtap='greaseShow'>
+          <text>油脂类\n<text  class='small'>应选 {{numberOfGrease}} 份</text></text>
+        </view>
+        <view class="{{showIngredients==7?'choosed':'tag'}}" bindtap='nutsShow'>
+          <text>坚果类\n<text  class='small'>应选 {{numberOfNuts}} 份</text></text>
+        </view>
+        <view class='image-basket' bindtap='showBasket'>
+          <image class='basket' src="/images/icon_basket_selected.png"></image>
+        </view>
+      </view>
+
+      <!--谷类-->
+      <scroll-view class="showIngredients" scroll-y style="height: 1000rpx;">
+        <checkbox-group bindchange="checkboxChange" wx:if='{{showIngredients==1}}'>
+          <label class="checkbox" wx:for="{{cereal}}" wx:key="item">
+            <view class='ingre'>
+              <view class='ingre-food'>
+                <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+                <view class='ingre-name'>{{item.name}}</view>
+              </view>
+              <checkbox value="{{item.id}}" checked="{{item.checked}}" disabled="{{showBasket}}" wx:if="{{!item.checked}}" />
+              <view class='icon-inline' wx:if="{{item.checked}}">
+                <view class='imager'>
+                  <image src='/images/icon_delete.png' bindtap='deleteCereal' id='{{item.id}}'></image>
+                </view>
+                <view class='choosedNumber'>{{item.copies}}</view>
+                <view class='imagel'>
+                  <image src='/images/icon-add2.png' bindtap='addCereal' id='{{item.id}}'></image>
+                </view>
+              </view>
+            </view>
+            <view class='tr'>
+              <view class='ta'>
+                <text class='small'>重量</text>
+                <text decode="{{true}}" space="{{true}}"> {{item.weight}} g</text>
+              </view>
+              <view class='ta center'>
+                <text class='small'>热量</text>
+                <text> {{item.calorie}} Kcal</text>
+              </view>
+            </view>
+          </label>
+        </checkbox-group>
+
+        <!--蔬菜-->
+        <checkbox-group bindchange="checkboxChange" wx:if='{{showIngredients==2}}'>
+          <label class="checkbox" wx:for="{{vegetable}}" wx:key="item">
+            <view class='ingre'>
+              <view class='ingre-food'>
+                <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+                <view class='ingre-name'>{{item.name}}</view>
+              </view>
+              <checkbox value="{{item.id}}" checked="{{item.checked}}" disabled="{{showBasket}}" wx:if="{{!item.checked}}" />
+              <view class='icon-inline' wx:if="{{item.checked}}">
+                <view class='imager'>
+                  <image src='/images/icon_delete.png' bindtap='deleteVeg' id='{{item.id}}'></image>
+                </view>
+                <view class='choosedNumber'>{{item.copies}}</view>
+                <view class='imagel'>
+                  <image src='/images/icon-add2.png' bindtap='addVeg' id='{{item.id}}'></image>
+                </view>
+              </view>
+            </view>
+            <view class='tr'>
+              <view class='ta'>
+                <text class='small'>重量</text>
+                <text decode="{{true}}" space="{{true}}"> {{item.weight}} g</text>
+              </view>
+              <view class='ta center'>
+                <text class='small'>热量</text>
+                <text> {{item.calorie}} Kcal</text>
+              </view>
+            </view>
+          </label>
+        </checkbox-group>
+
+        <!--水果-->
+        <checkbox-group bindchange="checkboxChange" wx:if='{{showIngredients==3}}'>
+          <label class="checkbox" wx:for="{{fruit}}" wx:key="item">
+            <view class='ingre'>
+              <view class='ingre-food'>
+                <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+                <view class='ingre-name'>{{item.name}}</view>
+              </view>
+              <checkbox value="{{item.id}}" checked="{{item.checked}}" disabled="{{showBasket}}" wx:if="{{!item.checked}}" />
+              <view class='icon-inline' wx:if="{{item.checked}}">
+                <view class='imager'>
+                  <image src='/images/icon_delete.png' bindtap='deleteFruit' id='{{item.id}}'></image>
+                </view>
+                <view class='choosedNumber'>{{item.copies}}</view>
+                <view class='imagel'>
+                  <image src='/images/icon-add2.png' bindtap='addFruit' id='{{item.id}}'></image>
+                </view>
+              </view>
+            </view>
+            <view class='tr'>
+              <view class='ta'>
+                <text class='small'>重量</text>
+                <text decode="{{true}}" space="{{true}}"> {{item.weight}} g</text>
+              </view>
+              <view class='ta center'>
+                <text class='small'>热量</text>
+                <text> {{item.calorie}} Kcal</text>
+              </view>
+            </view>
+          </label>
+        </checkbox-group>
+
+        <!--奶类-->
+        <checkbox-group bindchange="checkboxChange" wx:if='{{showIngredients==4}}'>
+          <label class="checkbox" wx:for="{{milk}}" wx:key="item">
+            <view class='ingre'>
+              <view class='ingre-food'>
+                <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+                <view class='ingre-name'>{{item.name}}</view>
+              </view>
+              <checkbox value="{{item.id}}" checked="{{item.checked}}" disabled="{{showBasket}}" wx:if="{{!item.checked}}" />
+              <view class='icon-inline' wx:if="{{item.checked}}">
+                <view class='imager'>
+                  <image src='/images/icon_delete.png' bindtap='deleteMilk' id='{{item.id}}'></image>
+                </view>
+                <view class='choosedNumber'>{{item.copies}}</view>
+                <view class='imagel'>
+                  <image src='/images/icon-add2.png' bindtap='addMilk' id='{{item.id}}'></image>
+                </view>
+              </view>
+            </view>
+            <view class='tr'>
+              <view class='ta'>
+                <text class='small'>重量</text>
+                <text decode="{{true}}" space="{{true}}"> {{item.weight}} g</text>
+              </view>
+              <view class='ta center'>
+                <text class='small'>热量</text>
+                <text> {{item.calorie}} Kcal</text>
+              </view>
+            </view>
+          </label>
+        </checkbox-group>
+        <!--肉蛋类-->
+        <checkbox-group bindchange="checkboxChange" wx:if='{{showIngredients==5}}'>
+          <label class="checkbox" wx:for="{{meatEgg}}" wx:key="item">
+            <view class='ingre'>
+              <view class='ingre-food'>
+                <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+                <view class='ingre-name'>{{item.name}}</view>
+              </view>
+              <checkbox value="{{item.id}}" checked="{{item.checked}}" disabled="{{showBasket}}" wx:if="{{!item.checked}}" />
+              <view class='icon-inline' wx:if="{{item.checked}}">
+                <view class='imager'>
+                  <image src='/images/icon_delete.png' bindtap='deleteMeatEgg' id='{{item.id}}'></image>
+                </view>
+                <view class='choosedNumber'>{{item.copies}}</view>
+                <view class='imagel'>
+                  <image src='/images/icon-add2.png' bindtap='addMeatEgg' id='{{item.id}}'></image>
+                </view>
+              </view>
+            </view>
+            <view class='tr'>
+              <view class='ta'>
+                <text class='small'>重量</text>
+                <text decode="{{true}}" space="{{true}}"> {{item.weight}} g</text>
+              </view>
+              <view class='ta center'>
+                <text class='small'>热量</text>
+                <text> {{item.calorie}} Kcal</text>
+              </view>
+            </view>
+          </label>
+        </checkbox-group>
+
+        <!--油脂类-->
+        <checkbox-group bindchange="checkboxChange" wx:if='{{showIngredients==6}}'>
+          <label class="checkbox" wx:for="{{grease}}" wx:key="item">
+            <view class='ingre'>
+              <view class='ingre-food'>
+                <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+                <view class='ingre-name'>{{item.name}}</view>
+              </view>
+              <checkbox value="{{item.id}}" checked="{{item.checked}}" disabled="{{showBasket}}" wx:if="{{!item.checked}}" />
+              <view class='icon-inline' wx:if="{{item.checked}}">
+                <view class='imager'>
+                  <image src='/images/icon_delete.png' bindtap='deleteGrease' id='{{item.id}}'></image>
+                </view>
+                <view class='choosedNumber'>{{item.copies}}</view>
+                <view class='imagel'>
+                  <image src='/images/icon-add2.png' bindtap='addGrease' id='{{item.id}}'></image>
+                </view>
+              </view>
+            </view>
+            <view class='tr'>
+              <view class='ta'>
+                <text class='small'>重量</text>
+                <text decode="{{true}}" space="{{true}}"> {{item.weight}} g</text>
+              </view>
+              <view class='ta center'>
+                <text class='small'>热量</text>
+                <text> {{item.calorie}} Kcal</text>
+              </view>
+            </view>
+          </label>
+        </checkbox-group>
+
+        <!--坚果类-->
+        <checkbox-group bindchange="checkboxChange" wx:if='{{showIngredients==7}}'>
+          <label class="checkbox" wx:for="{{nuts}}" wx:key="item">
+            <view class='ingre'>
+              <view class='ingre-food'>
+                <image class='ingre-images' src='{{item.url}}' align="middle"></image>
+                <view class='ingre-name'>{{item.name}}</view>
+              </view>
+              <checkbox value="{{item.id}}" checked="{{item.checked}}" disabled="{{showBasket}}" wx:if="{{!item.checked}}" />
+              <view class='icon-inline' wx:if="{{item.checked}}">
+                <view class='imager'>
+                  <image src='/images/icon_delete.png' bindtap='deleteNuts' id='{{item.id}}'></image>
+                </view>
+                <view class='choosedNumber'>{{item.copies}}</view>
+                <view class='imagel'>
+                  <image src='/images/icon-add2.png' bindtap='addNuts' id='{{item.id}}'></image>
+                </view>
+              </view>
+            </view>
+            <view class='tr'>
+              <view class='ta'>
+                <text class='small'>重量</text>
+                <text decode="{{true}}" space="{{true}}"> {{item.weight}} g</text>
+              </view>
+              <view class='ta center'>
+                <text class='small'>热量</text>
+                <text> {{item.calorie}} Kcal</text>
+              </view>
+            </view>
+          </label>
+        </checkbox-group>
+      </scroll-view>
+    </view>
+    <button bindtap='submitIngredient' class='bt absoluateIndex'>确定</button>
+  </view>
+
+  <!--展示购物车-->
+  <view class="{{showBasket?'mask':''}}" bindtap='showBasket'></view>
+  <cover-view wx:if='{{showBasket}}' class='basket-page-open' overflow-y:scroll>
+    <cover-view class='choosedfood' wx:if="{{choosedCereal.length>0}}">
+      <cover-view class='titlebox'>
+        <cover-view class='title'>谷类</cover-view>
+      </cover-view>
+      <cover-view wx:for='{{choosedCereal}}' wx:key="item" class='wrap'>
+        <cover-view class="choosedItems">
+          <cover-view class='foodName-left'>
+            <cover-view class='food-left'>{{item.name.length>8?item.abname:item.name}}</cover-view>
+          </cover-view>
+          <cover-view class='icon-inline-basket'>
+            <cover-view class='imager-basket'>
+              <cover-image src='/images/delete.png' id='{{item.id}}' bindtap='deleteCereal' class='icon-inline-images'></cover-image>
+            </cover-view>
+            <cover-view class='food-right'>{{item.copies}}</cover-view>
+            <cover-view class='imagel-basket'>
+              <cover-image src='/images/add.png' id='{{item.id}}' bindtap='addCereal' class='icon-inline-images'></cover-image>
+            </cover-view>
+          </cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class='blank'></cover-view>
+    </cover-view>
+    <cover-view class='choosedfood' wx:if="{{choosedVeg.length>0}}">
+      <cover-view class='titlebox'>
+        <cover-view class='title'> 蔬菜</cover-view>
+      </cover-view>
+      <cover-view wx:for='{{choosedVeg}}' wx:key="item" class='wrap'>
+        <cover-view class="choosedItems">
+          <cover-view class='foodName-left'>
+            <cover-view class='food-left'>{{item.name.length>8?item.abname:item.name}}</cover-view>
+          </cover-view>
+          <cover-view class='icon-inline-basket'>
+            <cover-view class='imager-basket'>
+              <cover-image src='/images/delete.png' id='{{item.id}}' bindtap='deleteVeg' class='icon-inline-images'></cover-image>
+            </cover-view>
+            <cover-view class='food-right'>{{item.copies}}</cover-view>
+            <cover-view class='imagel-basket'>
+              <cover-image src='/images/add.png' id='{{item.id}}' bindtap='addVeg' class='icon-inline-images'></cover-image>
+            </cover-view>
+          </cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class='blank'></cover-view>
+    </cover-view>
+    <cover-view class='choosedfood' wx:if="{{choosedFruit.length>0}}">
+      <cover-view class='titlebox'>
+        <cover-view class='title'> 水果 </cover-view>
+      </cover-view>
+      <cover-view wx:for='{{choosedFruit}}' wx:key="item" class='wrap'>
+        <cover-view class="choosedItems">
+          <cover-view class='foodName-left'>
+            <cover-view class='food-left'>{{item.name.length>8?item.abname:item.name}}</cover-view>
+          </cover-view>
+          <cover-view class='icon-inline-basket'>
+            <cover-view class='imager-basket'>
+              <cover-image src='/images/delete.png' id='{{item.id}}' bindtap='deleteFruit' class='icon-inline-images'></cover-image>
+            </cover-view>
+            <cover-view class='food-right'>{{item.copies}}</cover-view>
+            <cover-view class='imagel-basket'>
+              <cover-image src='/images/add.png' id='{{item.id}}' bindtap='addFruit' class='icon-inline-images'></cover-image>
+            </cover-view>
+          </cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class='blank'></cover-view>
+    </cover-view>
+    <cover-view class='choosedfood' wx:if="{{choosedMilk.length>0}}">
+      <cover-view class='titlebox'>
+        <cover-view class='title'> 奶类</cover-view>
+      </cover-view>
+      <cover-view wx:for='{{choosedMilk}}' wx:key="item" class='wrap'>
+        <cover-view class="choosedItems">
+          <cover-view class='foodName-left'>
+            <cover-view class='food-left'>{{item.name.length>8?item.abname:item.name}}</cover-view>
+          </cover-view>
+          <cover-view class='icon-inline-basket'>
+            <cover-view class='imager-basket'>
+              <cover-image src='/images/delete.png' id='{{item.id}}' bindtap='deleteMilk' class='icon-inline-images'></cover-image>
+            </cover-view>
+            <cover-view class='food-right'>{{item.copies}}</cover-view>
+            <cover-view class='imagel-basket'>
+              <cover-image src='/images/add.png' id='{{item.id}}' bindtap='addMilk' class='icon-inline-images'></cover-image>
+            </cover-view>
+          </cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class='blank'></cover-view>
+    </cover-view>
+    <cover-view class='choosedfood' wx:if="{{choosedMeatEgg.length>0}}">
+      <cover-view class='titlebox'>
+        <cover-view class='title'>
+          肉蛋类
+        </cover-view>
+      </cover-view>
+      <cover-view wx:for='{{choosedMeatEgg}}' wx:key="item" class='wrap'>
+        <cover-view class="choosedItems">
+          <cover-view class='foodName-left'>
+            <cover-view class='food-left'>{{item.name.length>8?item.abname:item.name}}</cover-view>
+          </cover-view>
+          <cover-view class='icon-inline-basket'>
+            <cover-view class='imager-basket'>
+              <cover-image src='/images/delete.png' id='{{item.id}}' bindtap='deleteMeatEgg' class='icon-inline-images'></cover-image>
+            </cover-view>
+            <cover-view class='food-right'>{{item.copies}}</cover-view>
+            <cover-view class='imagel-basket'>
+              <cover-image src='/images/add.png' id='{{item.id}}' bindtap='addMeatEgg' class='icon-inline-images'></cover-image>
+            </cover-view>
+          </cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class='blank'></cover-view>
+    </cover-view>
+    <cover-view class='choosedfood' wx:if="{{choosedGrease.length>0}}">
+      <cover-view class='titlebox'>
+        <cover-view class='title'>
+          油脂类
+        </cover-view>
+      </cover-view>
+      <cover-view wx:for='{{choosedGrease}}' wx:key="item" class='wrap'>
+        <cover-view class="choosedItems">
+          <cover-view class='foodName-left'>
+            <cover-view class='food-left'>{{item.name.length>8?item.abname:item.name}}</cover-view>
+          </cover-view>
+          <cover-view class='icon-inline-basket'>
+            <cover-view class='imager-basket'>
+              <cover-image src='/images/delete.png' id='{{item.id}}' bindtap='deleteGrease' class='icon-inline-images'></cover-image>
+            </cover-view>
+            <cover-view class='food-right'>{{item.copies}}</cover-view>
+            <cover-view class='imagel-basket'>
+              <cover-image src='/images/add.png' id='{{item.id}}' bindtap='addGrease' class='icon-inline-images'></cover-image>
+            </cover-view>
+          </cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class='blank'></cover-view>
+    </cover-view>
+    <cover-view class='choosedfood' wx:if="{{choosedNuts.length>0}}">
+      <cover-view class='titlebox'>
+        <cover-view class='title'>
+          坚果类
+        </cover-view>
+      </cover-view>
+      <cover-view wx:for='{{choosedNuts}}' wx:key="item" class='wrap'>
+        <cover-view class="choosedItems">
+          <cover-view class='foodName-left'>
+            <cover-view class='food-left'>{{item.name.length>8?item.abname:item.name}}</cover-view>
+          </cover-view>
+          <cover-view class='icon-inline-basket'>
+            <cover-view class='imager-basket'>
+              <cover-image src='/images/delete.png' id='{{item.id}}' bindtap='deleteNuts' class='icon-inline-images'></cover-image>
+            </cover-view>
+            <cover-view class='food-right'>{{item.copies}}</cover-view>
+            <cover-view class='imagel-basket'>
+              <cover-image src='/images/add.png' id='{{item.id}}' bindtap='addNuts' class='icon-inline-images'></cover-image>
+            </cover-view>
+          </cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class='blank'></cover-view>
+    </cover-view>
+    <cover-view wx:if="{{!choosedNumber}}" class='position-center'>购物车里是空的哦~</cover-view>
+  </cover-view>
